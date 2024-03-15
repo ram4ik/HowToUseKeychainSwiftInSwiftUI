@@ -16,6 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         Button(userPassword.isEmpty ? "No password" : userPassword) {
+            keychain.synchronizable = true
             let newPassword = "def123!"
             keychain.set(newPassword, forKey: "user_password")
             userPassword = newPassword
