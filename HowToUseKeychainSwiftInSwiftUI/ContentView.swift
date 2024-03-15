@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
+import KeychainSwift
 
 struct ContentView: View {
+    
+    let keychain = KeychainSwift()
+    
+    @State private var userPassword: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Button(userPassword.isEmpty ? "No password" : userPassword) {
+            let newPassword = "def123!"
+            keychain.set(newPassword, forKey: "user_password")
+            userPassword = newPassword
         }
-        .padding()
+        .onAppear() {
+            userPassword =  keychain.get("user_password") ?? ""
+        }
     }
 }
 

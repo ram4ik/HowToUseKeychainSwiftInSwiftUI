@@ -11,6 +11,7 @@
 		5EF7BF2B2BA4C9AD00269584 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF7BF2A2BA4C9AD00269584 /* ContentView.swift */; };
 		5EF7BF2D2BA4C9AE00269584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF7BF2C2BA4C9AE00269584 /* Assets.xcassets */; };
 		5EF7BF302BA4C9AE00269584 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF7BF2F2BA4C9AE00269584 /* Preview Assets.xcassets */; };
+		5EF7BF382BA4CAB800269584 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5EF7BF372BA4CAB800269584 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF7BF382BA4CAB800269584 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = HowToUseKeychainSwiftInSwiftUI;
+			packageProductDependencies = (
+				5EF7BF372BA4CAB800269584 /* KeychainSwift */,
+			);
 			productName = HowToUseKeychainSwiftInSwiftUI;
 			productReference = 5EF7BF252BA4C9AD00269584 /* HowToUseKeychainSwiftInSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 5EF7BF1C2BA4C9AD00269584;
+			packageReferences = (
+				5EF7BF362BA4CAB800269584 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 5EF7BF262BA4C9AD00269584 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5EF7BF362BA4CAB800269584 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5EF7BF372BA4CAB800269584 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EF7BF362BA4CAB800269584 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EF7BF1D2BA4C9AD00269584 /* Project object */;
 }
